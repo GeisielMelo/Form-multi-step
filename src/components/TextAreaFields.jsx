@@ -17,32 +17,28 @@ const Label = styled.label`
   color: #323238;
 `;
 
-const Input = styled.input`
+const TextArea = styled.textarea`
   max-width: 528px;
-  height: 56px;
+  height: 100px;
 
+  font-family: "IBM Plex Sans";
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
 
-  ::-webkit-inner-spin-button,
-  ::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-    display: none;
-  }
+  resize: none;
 `;
 
-const InputField = ({ label, ...props }) => {
+const TextAreaFields = ({ label, ...props }) => {
 
   return (
     <InputFieldWrapper>
       <Label>{label}</Label>
-      <Input {...props} />
+      <TextArea {...props} />
     </InputFieldWrapper>
   );
 };
 
 
-export default InputField;
+export default TextAreaFields;
