@@ -6,10 +6,7 @@ export const Container = styled.div`
   align-items: flex-start;
   padding: 32px;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
 
   background: #ffffff;
   border: 1px solid #e1e1e6;

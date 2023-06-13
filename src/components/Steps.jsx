@@ -13,6 +13,11 @@ const Container = styled.div`
 
   max-width: 528px;
   max-height: 44px;
+
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+    gap: 0px;
+  }
 `;
 
 const Step = styled.div`

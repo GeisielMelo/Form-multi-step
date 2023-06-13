@@ -8,7 +8,7 @@ const Div = styled.div`
   align-items: center;
   padding: 0px;
 
-  width: 528px;
+  width: 100%;
   height: 56px;
 `;
 

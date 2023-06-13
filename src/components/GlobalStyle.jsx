@@ -6,4 +6,11 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 `
