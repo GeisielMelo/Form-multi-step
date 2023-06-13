@@ -4,9 +4,14 @@ import Buttons from "./components/Buttons";
 import InputField from "./components/InputFields";
 import TextAreaFields from "./components/TextAreaFields";
 import Steps from "./components/Steps";
+import Finished from "./components/Finished";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
+
+  const handleRedirect = () => {
+    window.open("https://geisielmelo.netlify.app", "_blank");
+  };
 
   return (
     <section>
@@ -52,7 +57,7 @@ function App() {
                 placeholder="Digite o número de colaboradores"
                 type="number"
               />
-              <TextAreaFields 
+              <TextAreaFields
                 label="Sobre seu negócio"
                 placeholder="Fale um pouco sobre seus produtos ou serviços"
               />
@@ -78,8 +83,20 @@ function App() {
               page={currentStep}
               continue="Enviar proposta"
               back="Voltar"
-              onContinue={() => alert("Obrigado por entrar em contato!")}
+              onContinue={() => setCurrentStep(4)}
               onBack={() => setCurrentStep(2)}
+            />
+          </>
+        )}
+        {currentStep === 4 && (
+          <>
+            <InputDiv>
+              <Finished msg="Obrigado por entrar em contato!" />
+            </InputDiv>
+            <Buttons
+              page={currentStep}
+              continue="Sair"
+              onContinue={handleRedirect}
             />
           </>
         )}

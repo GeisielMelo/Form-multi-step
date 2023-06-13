@@ -55,7 +55,7 @@ const CircularDiv = styled.div`
   font-weight: 700;
   font-size: 14px;
   line-height: 150%;
-  color: #FFFFFF;
+  color: #ffffff;
 `;
 
 const StepTitle = styled.h2`
@@ -89,13 +89,20 @@ const Steps = (props) => {
     stepOne = "#1D8841";
     stepTwo = "#633BBC";
     stepThree = "#E1E1E6";
-    valueOne = <Image src={Check}/>;
+    valueOne = <Image src={Check} />;
   } else if (currentStep === 3) {
     stepOne = "#1D8841";
     stepTwo = "#1D8841";
     stepThree = "#633BBC";
-    valueOne = <Image src={Check}/>;
-    valueTwo = <Image src={Check}/>;
+    valueOne = <Image src={Check} />;
+    valueTwo = <Image src={Check} />;
+  } else if (currentStep === 4) {
+    stepOne = "#1D8841";
+    stepTwo = "#1D8841";
+    stepThree = "#1D8841";
+    valueOne = <Image src={Check} />;
+    valueTwo = <Image src={Check} />;
+    valueThree = <Image src={Check} />;
   }
 
   return (
