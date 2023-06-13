@@ -4,7 +4,7 @@ const Div = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: ${(props) =>
-    props.isPageOne ? "flex-end" : "space-between"};
+    props.onlyRightButton ? "flex-end" : "space-between"};
   align-items: center;
   padding: 0px;
 
@@ -56,8 +56,8 @@ const Buttons = ({ onContinue, onBack, ...props }) => {
   const currentPage = props.page;
 
   return (
-    <Div isPageOne={currentPage === 1}>
-      {currentPage === 1 ? (
+    <Div onlyRightButton={currentPage === 1 || currentPage === 4}>
+      {currentPage === 1 || currentPage === 4 ? (
         <ButtonContinue onClick={onContinue}>{props.continue}</ButtonContinue>
       ) : (
         <>
